@@ -5,7 +5,7 @@ export default class SignupForm extends Component {
     state = {
         email: "",
         password: "",
-        confirm: "",
+        password_confirmation: "",
         error: ""
     }
 
@@ -21,7 +21,7 @@ export default class SignupForm extends Component {
         try {
             const formData = {...this.state}
             delete formData.error
-            delete formData.confirm
+            // delete formData.password_confirmation
             console.log(formData)
 
             const user = await signUp(formData)
@@ -36,7 +36,7 @@ export default class SignupForm extends Component {
     }
 
     render() {
-        const disable = this.state.password !== this.state.confirm
+        const disable = this.state.password !== this.state.password_confirmation
 
         return (
             <>
@@ -58,8 +58,8 @@ export default class SignupForm extends Component {
                         <label>Confirm password</label>
                         <input
 							type="password" 
-							name="confirm" 
-							value={this.state.confirm} 
+							name="password_confirmation" 
+							value={this.state.password_confirmation} 
 							onChange={this.handleChange} 
 							required></input>
 						<button type="submit" disabled={disable}>Sign up</button>
