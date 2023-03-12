@@ -1,5 +1,5 @@
 import { getToken } from './users-service'
-const BASE_URL = 'http://localhost:8000/wastewise'
+const BASE_URL = '/wastewise'
 
 export async function signUp(userData){
     return sendRequest(BASE_URL + '/sign-up/', 'POST', userData)
