@@ -1,16 +1,17 @@
 import { getToken } from './users-service'
-const BASE_URL = '/wastewise/'
+const BASE_URL = 'http://localhost:8000/wastewise'
 
 export async function signUp(userData){
-    return sendRequest(BASE_URL + 'sign-up/', 'POST', userData)
+    return sendRequest(BASE_URL + '/sign-up/', 'POST', userData)
 }
 
 export async function login(credentials){
-    return sendRequest(BASE_URL + 'login/', 'POST', credentials)
+    return sendRequest(BASE_URL + '/login/', 'POST', credentials)
 }
 
 export default async function sendRequest(url, method='GET', payload=null){
     const options = { method }
+    
     if (payload){
         options.headers = {'Content-type': 'application/json'}
         options.body = JSON.stringify(payload)
@@ -18,7 +19,6 @@ export default async function sendRequest(url, method='GET', payload=null){
 
     const token = getToken()
     if (token){
-
         options.headers = options.headers || {}
         options.headers.Authorization = `Token ${token}`
     }

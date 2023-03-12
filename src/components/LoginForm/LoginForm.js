@@ -9,23 +9,23 @@ export default function LoginForm({ setUser }) {
   });
   const [error, setError] = useState('');
 
-  function handleChange(evt) {
-    setCredentials({ ...credentials, [evt.target.name]: evt.target.value });
+  function handleChange(event) {
+    setCredentials({ ...credentials, [event.target.name]: event.target.value });
     setError('');
   }
 
-  async function handleSubmit(evt) {
-    evt.preventDefault();
+  async function handleSubmit(event) {
+    event.preventDefault();
     try {
       const user = await usersService.login(credentials);
       setUser(user);
     } catch {
-      setError('Log In Failed - Try Again');
+      setError('Oops! Failed to login, try again');
     }
   }
 
   return (
-    <div className="auth-container">
+    <>
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
           <label>Email</label>
@@ -45,7 +45,7 @@ export default function LoginForm({ setUser }) {
           <button className="auth-button" type="submit">Login</button>
         </form>
       </div>
-      <p className="error-message">&nbsp;{error}</p>
-    </div>
+      <p className="error-message">{error}</p>
+    </>
   );
 }

@@ -30,6 +30,7 @@ export function logOut() {
 export async function login(credentials) {
     const token = await usersAPI.login(credentials)
 
-    localStorage.setItem("token", token)
+    localStorage.setItem("token", token.user.token)
+    console.log(token)
     return getUser()
 }

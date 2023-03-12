@@ -15,8 +15,8 @@ export default function AuthPage({ setUser }) {
     return (
         <>
             <div className="welcome-page">
-                <h1>iPasta</h1>
-                <p>make your pasta dreams come true</p>
+                <h1>Wastewise</h1>
+                <p>(some sort of slogan)</p>
             </div>
             {showSignUp ? (
                 <SignUpForm setUser={setUser} />
