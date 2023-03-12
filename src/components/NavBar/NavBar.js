@@ -3,6 +3,7 @@ import * as userService from '../../utilities/users-service'
 
 export default function NavBar({ user, setUser }){
     
+    console.log(user)
     function handleLogout(){
         userService.logOut()
         setUser(null)
@@ -10,7 +11,7 @@ export default function NavBar({ user, setUser }){
 
     return (
         <nav>
-            <span>{user.email}</span>
+            <span>Logged in as (user's email here)</span>
             <Link to="" onClick={handleLogout}>Logout</Link>
         </nav>
     )

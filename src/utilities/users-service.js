@@ -4,7 +4,7 @@ export async function signUp(userData) {
     const token = await usersAPI.signUp(userData)
     // console.log(token)
     // localStorage.setItem("token", token.user.token)
-    return getUser()
+    return login(userData)
 }
 
 export function getToken() {
@@ -29,8 +29,7 @@ export function logOut() {
 
 export async function login(credentials) {
     const token = await usersAPI.login(credentials)
-
-    localStorage.setItem("token", token.user.token)
     // console.log(token)
+    localStorage.setItem("token", token.user.token)
     return getUser()
 }
