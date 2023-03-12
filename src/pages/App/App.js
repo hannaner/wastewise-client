@@ -1,14 +1,29 @@
-// import { useState } from "react";
-// import { Routes, Route, Navigate } from "react-router-dom";
-// import AuthPage from '../AuthPage/AuthPage';
+import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom';
+
 import './App.css';
 import AuthPage from '../../pages/AuthPage/AuthPage'
 
+import { getUser } from '../../utilities/users-service'
+
 export default function App() {
-  // const [user, setUser] = useState(getUser)
+  const [user, setUser] = useState(getUser())
+
   return (
     <main className="App">
-      <AuthPage />
+      <AuthPage setUser={setUser}/>
+      {/* { user ? (
+        <>
+        <Routes>
+          <Route path='/spots' element={} />
+        </Routes>
+        </>
+
+      ) : (
+        <>
+          <AuthPage setUser={setUser}/>
+        </>
+      )} */}
     </main>
   );
 }
