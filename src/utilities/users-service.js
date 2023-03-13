@@ -23,17 +23,18 @@ export function getUser() {
     }
 }
 
-
-
 export function logOut() {
     localStorage.removeItem("token")
+    localStorage.removeItem("user")
+    localStorage.removeItem("userId")
 }
 
 export async function login(credentials) {
     const token = await usersAPI.login(credentials)
-    // console.log(token)
     localStorage.setItem("token", token.user.token)
-    console.log(localStorage)
-    // localStorage.setItem("user", token.user.email)
+    // this isn't secure, but will need to figure out how to obtain user info later 
+    localStorage.setItem("user", token.user.email)
+    localStorage.setItem("userId", token.user.id)
+    console.log(token.user)
     return getUser()
 }

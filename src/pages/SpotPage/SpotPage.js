@@ -11,7 +11,8 @@ export default function SpotPage({ user, setUser }){
         await spotAPI.indexSpots()
     }
 
-    showSpots()
+    // add use effect to show all spots
+    // showSpots()
 
     return(
         <>
