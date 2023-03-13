@@ -23,6 +23,8 @@ export function getUser() {
     }
 }
 
+
+
 export function logOut() {
     localStorage.removeItem("token")
 }
@@ -31,6 +33,7 @@ export async function login(credentials) {
     const token = await usersAPI.login(credentials)
     // console.log(token)
     localStorage.setItem("token", token.user.token)
+    console.log(localStorage)
     // localStorage.setItem("user", token.user.email)
     return getUser()
 }
