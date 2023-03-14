@@ -1,4 +1,4 @@
-import { useState } from 'react'
+/* ------- Form to create new spot -------*/
 import * as spotAPI from '../../utilities/spot-api'
 
 export default function NewSpotForm({ user, setUser, newSpot, setNewSpot, showSpot, setShowSpot }){
@@ -18,7 +18,8 @@ export default function NewSpotForm({ user, setUser, newSpot, setNewSpot, showSp
         try {
             const spotData = { "title": newSpot.title, "description": newSpot.description, "owner": userId}
     
-            console.log(spotData)
+            // console.log(spotData)
+            // returns {spot: } with arrays of spot objects
     
             await spotAPI.createSpot(spotData)
             setShowSpot()

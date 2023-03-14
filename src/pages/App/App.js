@@ -25,7 +25,13 @@ export default function App() {
                 user={user}
               /> 
             } />
-
+            
+            {/* <Route path='/spot/items' element={ 
+              < SpotPage 
+                setUser={setUser}
+                user={user}
+              /> 
+            } /> */}
             
           </Routes>
         </>

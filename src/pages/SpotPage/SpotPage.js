@@ -1,3 +1,4 @@
+/* ------- Page to view all spots -------*/
 import { useState, useEffect } from 'react'
 import NewSpotForm from '../../components/NewSpotForm/NewSpotForm'
 import SpotDetail from '../../components/SpotDetail/SpotDetail'
@@ -46,6 +47,7 @@ export default function SpotPage({ user, setUser }){
         <>
             <h2>Spot page</h2>
             {spotsList}
+
             <NewSpotForm setUser={setUser} user={user}newSpot={newSpot} setNewSpot={setNewSpot} showSpot={showSpot} setShowSpot={setShowSpot}/>
         </>
     );

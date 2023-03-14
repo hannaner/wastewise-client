@@ -1,3 +1,4 @@
+/* ------- API requests for Spot -------*/
 import sendRequest from "./users-api"
 const BASE_URL = '/wastewise'
 
