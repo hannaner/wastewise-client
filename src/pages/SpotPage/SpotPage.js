@@ -1,7 +1,7 @@
 /* ------- Page to view all spots -------*/
 import { useState, useEffect } from 'react'
 import NewSpotForm from '../../components/NewSpotForm/NewSpotForm'
-import SpotDetail from '../../components/SpotDetail/SpotDetail'
+import SpotItem from '../../components/SpotItem/SpotItem'
 import * as spotAPI from '../../utilities/spot-api'
 
 export default function SpotPage({ user, setUser }){
@@ -30,22 +30,24 @@ export default function SpotPage({ user, setUser }){
     // console.log(showSpot.spots)
     // state is a nested array of objects
     // console.log(spotList)
-    // spotList = showSpot.spots.map((spot, index) => <SpotDetail spot={spot} key={index}/>)
+    // spotList = showSpot.spots.map((spot, index) => <SpotItem spot={spot} key={index}/>)
     // testMap = showSpot.spots.map((spotObj) => {return spotObj.title})
     if (showSpot){
+        console.log(showSpot)
         spotsList = showSpot.spots.map((spotObj, index) => (
-            <SpotDetail
+            <SpotItem
                 key={index}
                 spotId={spotObj.id} 
                 spotTitle={spotObj.title} 
                 spotDescription={spotObj.description}
+                spotItems={spotObj.items}
             />
         ))
     }
 
     return(
         <>
-            <h2>Spot page</h2>
+            <h2>Your spots</h2>
             {spotsList}
 
             <NewSpotForm setUser={setUser} user={user}newSpot={newSpot} setNewSpot={setNewSpot} showSpot={showSpot} setShowSpot={setShowSpot}/>

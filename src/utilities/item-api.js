@@ -8,12 +8,6 @@ export async function createItem(itemData){
 }
 
 // view all items
-// export function indexItems(){
-//     return sendRequest(BASE_URL + '/items/', 'GET')
-//     // tried passing in spotId
-// }
-export function indexItems(spotId){
-    console.log(spotId)
-    return sendRequest(BASE_URL + '/items/', 'GET', spotId)
-    // tried passing in spotId
+export function indexItems(){
+    return sendRequest(BASE_URL + '/items/', 'GET')
 }
