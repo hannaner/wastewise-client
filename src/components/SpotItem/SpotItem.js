@@ -22,6 +22,8 @@ export default function SpotItem({ spotId, spotTitle, spotDescription, spotItems
             itemName={itemObj.name} 
             itemQuantity={itemObj.quantity}
             itemExpDate={itemObj.exp_date}
+            items={items}
+            setItem={setItems}
             />
             ))
         }
