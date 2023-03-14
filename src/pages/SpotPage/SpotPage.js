@@ -11,25 +11,42 @@ export default function SpotPage({ user, setUser }){
 
     // API call to retrieve all spots
     async function getAllSpots(){
-        const spotsBelongingToUser = await spotAPI.indexSpots()
-        setShowSpot(spotsBelongingToUser)
+        try {
+            const spotsBelongingToUser = await spotAPI.indexSpots()
+            setShowSpot(spotsBelongingToUser)
+        } catch(error) {
+            console.error(error)
+        }
     }
 
     useEffect(function(){
         getAllSpots()
-    }, [])
+    }, [user])
 
-    let spotList = null
-    console.log(showSpot)
-    spotList = showSpot.spots.map((spot, index) => spot)
-    console.log(spotList)
+
+    let spotsList = null
+    // spotList = showSpot.spots.map((spot, index) => )
+    // console.log(showSpot.spots)
+    // state is a nested array of objects
+    // console.log(spotList)
     // spotList = showSpot.spots.map((spot, index) => <SpotDetail spot={spot} key={index}/>)
-    
+    // testMap = showSpot.spots.map((spotObj) => {return spotObj.title})
+    if (showSpot){
+        spotsList = showSpot.spots.map((spotObj, index) => (
+            <SpotDetail
+                key={index}
+                spotId={spotObj.id} 
+                spotTitle={spotObj.title} 
+                spotDescription={spotObj.description}
+            />
+        ))
+    }
+
     return(
         <>
             <h2>Spot page</h2>
-            {spotList}
-            <NewSpotForm setUser={setUser} user={user}newSpot={newSpot} setNewSpot={setNewSpot}/>
+            {spotsList}
+            <NewSpotForm setUser={setUser} user={user}newSpot={newSpot} setNewSpot={setNewSpot} showSpot={showSpot} setShowSpot={setShowSpot}/>
         </>
     );
 }

@@ -1,12 +1,11 @@
-export default function SpotItem({ spot, index }){
+export default function SpotItem({ spotId, spotTitle, spotDescription }){
     // console.log(showSpot)
     // console.log(showSpot[0])
-    // console.log(showSpot.spots)
 
     return(
-        <div>
-            <p>(test)</p>
-
+        <div data-id={spotId}>
+            <h3>Spot: {spotTitle}</h3>
+            <p>Description: {spotDescription}</p>
         </div>
     );
 }

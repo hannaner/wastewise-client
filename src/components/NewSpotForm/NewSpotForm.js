@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import * as spotAPI from '../../utilities/spot-api'
 
-export default function NewSpotForm({ user, setUser, newSpot, setNewSpot }){
+export default function NewSpotForm({ user, setUser, newSpot, setNewSpot, showSpot, setShowSpot }){
 
     const userId = parseInt(localStorage.getItem('userId'))
 
@@ -21,6 +21,8 @@ export default function NewSpotForm({ user, setUser, newSpot, setNewSpot }){
             console.log(spotData)
     
             await spotAPI.createSpot(spotData)
+            setShowSpot()
+            // return spotData
 
         } catch (error) {
             console.error(error)
