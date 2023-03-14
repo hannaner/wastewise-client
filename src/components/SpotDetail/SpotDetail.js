@@ -1,7 +1,12 @@
-export default function SpotItem(){
+export default function SpotItem({ spot, index }){
+    // console.log(showSpot)
+    // console.log(showSpot[0])
+    // console.log(showSpot.spots)
+
     return(
-        <>
-            <h2>spot item component</h2>
-        </>
+        <div>
+            <p>(test)</p>
+
+        </div>
     );
 }
