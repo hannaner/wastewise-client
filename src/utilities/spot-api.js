@@ -13,8 +13,8 @@ export function indexSpots(){
 }
 
 // Update single spot
-export function updateSpot(spotId){
-    return sendRequest(`${BASE_URL}/spots/${spotId}`, 'PATCH', spotId)
+export function updateSpot(spotId, spotData){
+    return sendRequest(`${BASE_URL}/spots/${spotId}`, 'PATCH', spotData)
 }
 
 // View single spot
