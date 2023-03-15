@@ -9,6 +9,10 @@ export async function login(credentials){
     return sendRequest(BASE_URL + '/login/', 'POST', credentials)
 }
 
+export async function logout(credentials){
+    return sendRequest(BASE_URL + '/logout/', 'DELETE', credentials)
+}
+
 export default async function sendRequest(url, method='GET', payload=null){
     const options = { method }
     
@@ -30,4 +34,3 @@ export default async function sendRequest(url, method='GET', payload=null){
         throw new Error('Bad request')
     }
 }
-
