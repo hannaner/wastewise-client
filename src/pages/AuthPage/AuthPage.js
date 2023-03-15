@@ -16,7 +16,7 @@ export default function AuthPage({ setUser }) {
         <>
             <div className="welcome-page">
                 <h1>Wastewise</h1>
-                <p>(some sort of slogan)</p>
+                <p>reduce food waste</p>
             </div>
             {showSignUp ? (
                 <SignUpForm setUser={setUser} />
@@ -29,7 +29,7 @@ export default function AuthPage({ setUser }) {
                 </>
                 : 
                 <>
-                    <p>First time here? Sign up <a className="authpage-link" onClick={handleSwitchForms} href="">here</a></p>
+                    <p>Don't have an account? Sign up <a className="authpage-link" onClick={handleSwitchForms} href="">here</a></p>
                 </>
             }
         </>
