@@ -1,75 +1,53 @@
-Client side for wastewise project
+# Wastewise
+According to the Environmental Protection Agency and the U.S. Department of Agriculture, food waste is estimated to be 30-40% of the entire US food supply, equating to about 219 pounds of waste per person.
 
-<details>
-    <summary>React native default readme</summary>
-    # Getting Started with Create React App
+To help minimize food waste, Wastewise helps you keep track of your food items before the food item goes bad.
 
-    This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Resources:
+[Food waste guide by RTS](https://www.rts.com/resources/guides/food-waste-america/)
+[USDA on food waste](https://www.usda.gov/foodwaste/faqs)
 
-    ## Available Scripts
+### Walkthrough
+<figure>
+    <figcaption>Login</figcaption>
+    <img alt="login" src="public/images/login.jpg" width="85%" height="85%">
+</figure>
+<figure>
+    <figcaption>Create spot</figcaption>
+    <img alt="new-user" src="public/images/new_user.jpg" width="85%" height="85%">
+</figure>
+<figure>
+    <figcaption>Add items to your spot</figcaption>
+    <img alt="all" src="public/images/show_all.jpg" width="85%" height="85%">
+</figure>
 
-    In the project directory, you can run:
 
-    ### `npm start`
+## Tech stack
+|          | Technologies used            |
+|----------|------------------------------|
+| Backend  | Django, Python, PostgreSQL   |
+| Frontend | React, JavaScript, HTML, CSS |
+| Other    | Django Frameworks, Git       |
 
-    Runs the app in the development mode.\
-    Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-    The page will reload when you make changes.\
-    You may also see any lint errors in the console.
+## Getting Started
+- Deployed website: :construction: under construction :construction:
+- [Project planning](https://trello.com/invite/b/PEh64K59/ATTI39744314898e569baea8946417d090d1194B91FC/project-4)
 
-    ### `npm test`
 
-    Launches the test runner in the interactive watch mode.\
-    See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Next Steps
+### Version 2
+- AAU, I want to edit an item's details.
+- AAU, I want to delete an item from a spot.
+- AAU, I want to see an item turn red 2 days before it expires.
+- AAU, I want to receive a notification in-app if it's nearing an item's expiration date.
+- AAU, I want to sign up via Google OAuth.
 
-    ### `npm run build`
-
-    Builds the app for production to the `build` folder.\
-    It correctly bundles React in production mode and optimizes the build for the best performance.
-
-    The build is minified and the filenames include the hashes.\
-    Your app is ready to be deployed!
-
-    See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-    ### `npm run eject`
-
-    **Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-    If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-    Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-    You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-    ## Learn More
-
-    You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-    To learn React, check out the [React documentation](https://reactjs.org/).
-
-    ### Code Splitting
-
-    This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-    ### Analyzing the Bundle Size
-
-    This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-    ### Making a Progressive Web App
-
-    This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-    ### Advanced Configuration
-
-    This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-    ### Deployment
-
-    This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-    ### `npm run build` fails to minify
-
-    This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-</details>
+### Version 3
+- AAU, I want to add items by uploading a picture of a receipt.
+- AAU, I'd like to reorder items by click and dragging.
+- AAU, I want to share lists with others.
+- AAU, I want to upload a picture for each item.
+- AAU, I want to change themes.
+- AAU, I want a text notification.
+- AAU, I want to set my own alert time frame.
