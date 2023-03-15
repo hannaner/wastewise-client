@@ -29,6 +29,9 @@ export default async function sendRequest(url, method='GET', payload=null){
 
     const res = await fetch(url, options)
     if (res.ok) {
+        if (method === "DELETE"){
+            return
+        }
         return res.json()
     } else {
         throw new Error('Bad request')

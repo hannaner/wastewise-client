@@ -21,3 +21,7 @@ export function updateSpot(spotId){
 export function showSpot(spotId){
     return sendRequest(`${BASE_URL}/spots/${spotId}`, 'GET')
 }
+
+export function deleteSpot(spotId){
+    return sendRequest(BASE_URL + '/spots/' + `${spotId}`, 'DELETE')
+}

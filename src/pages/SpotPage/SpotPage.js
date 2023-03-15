@@ -30,7 +30,7 @@ export default function SpotPage({ user, setUser }){
     let spotsList = null
 
     // show all spots
-    if (showSpots){
+    if (showSpots && showSpots.length > 0){
         spotsList = showSpots.map((spot, index) => (
             <Spot
                 key={index}
@@ -43,10 +43,18 @@ export default function SpotPage({ user, setUser }){
         ))
     }
 
+    console.log(showSpots)
     return(
         <>
             <h2>Your spots</h2>
-            {spotsList}
+            { (showSpots == undefined || !showSpots || showSpots.length == 0) ? 
+            <>
+                <p>No spots created yet!</p>
+                <p>Start by adding a spot where you'd like to keep track of food items</p>
+            </>
+            :
+            spotsList
+            }
 
             <NewSpotForm 
                 setUser={setUser}
