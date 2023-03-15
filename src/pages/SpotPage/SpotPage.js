@@ -47,6 +47,14 @@ export default function SpotPage({ user, setUser }){
     return(
         <>
             <h2>Your spots</h2>
+            <NewSpotForm 
+                setUser={setUser}
+                user={user}
+                newSpot={newSpot}
+                setNewSpot={setNewSpot}
+                getAllSpots={getAllSpots}
+            />
+            
             { (showSpots == undefined || !showSpots || showSpots.length == 0) ? 
             <>
                 <p>No spots created yet!</p>
@@ -56,13 +64,6 @@ export default function SpotPage({ user, setUser }){
             spotsList
             }
 
-            <NewSpotForm 
-                setUser={setUser}
-                user={user}
-                newSpot={newSpot}
-                setNewSpot={setNewSpot}
-                getAllSpots={getAllSpots}
-            />
         </>
     );
 }

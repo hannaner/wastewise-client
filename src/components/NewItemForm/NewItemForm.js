@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import * as itemAPI from '../../utilities/item-api'
+import './NewItemForm.css'
 
 export default function NewItemForm({ spotId, getAllSpots }){
     const [newItem, setNewItem] = useState('')
@@ -29,7 +30,8 @@ export default function NewItemForm({ spotId, getAllSpots }){
             await itemAPI.createItem(itemData)
 
             getAllSpots()
-
+            
+            // somehow not resetting form states to empty values
             setNewItem('')
             
         } catch(error) {
@@ -40,7 +42,7 @@ export default function NewItemForm({ spotId, getAllSpots }){
     return (
         <div className="new-item-form-container">
             <h4>Add an item</h4>
-            <form>
+            <form className="new-item-form">
                 <label>Item name</label>
                 <input
                     type="text"

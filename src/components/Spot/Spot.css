@@ -1,11 +1,11 @@
 .spot-item {
     align-items: flex-start;
-    align-content: space-between;
-    border: .3vmin solid var(--moss-green);
+    justify-content: space-evenly;
+    border: .3vmin solid var(--tea-green);
     background-color: var(--beige);
     border-radius: .5vmin;
     display: flex;
-    padding: 10px 15px;
+    padding: 10px 5px;
     margin: 10px; 
     margin-bottom: 20px;
 }
@@ -27,5 +27,5 @@ button.item-toggle-btn {
 }
 
 .item-form-container {
-    margin-left: 10px;
+    margin-left: 15px;
 }

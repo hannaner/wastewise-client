@@ -1,5 +1,6 @@
 /* ------- Form to create new spot -------*/
 import * as spotAPI from '../../utilities/spot-api'
+import './NewSpotForm.css'
 
 export default function NewSpotForm({ newSpot, setNewSpot, getAllSpots }){
 
@@ -31,9 +32,9 @@ export default function NewSpotForm({ newSpot, setNewSpot, getAllSpots }){
     }
 
     return (
-        <>
-            <form>
-                <h3>Add a new spot</h3>
+        <div className="new-spot-form-container">
+            <h4>Add a new spot</h4>
+            <form className="new-spot-form">
                 <label>Title</label>
                 <input 
                     type="text"
@@ -54,6 +55,6 @@ export default function NewSpotForm({ newSpot, setNewSpot, getAllSpots }){
                     Add spot
                 </button>
             </form>
-        </>
+        </div>
     );
 }

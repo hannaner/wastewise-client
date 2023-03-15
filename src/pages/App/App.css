@@ -1,5 +1,23 @@
 .App {
+}
 
+.welcome-page {
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.welcome-page p {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.greeting .form-container {
+  display: flex;
+  justify-content: center;
 }
 
 .form-container {
@@ -8,6 +26,11 @@
   border: .3vmin solid var(--tea-green);
   border-radius: 1vmin;
   width: 600px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-top: 0px;
 }
 
 form {

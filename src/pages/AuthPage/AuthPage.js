@@ -13,8 +13,8 @@ export default function AuthPage({ setUser }) {
     }
 
     return (
-        <>
-            <div className="welcome-page">
+        <div className="welcome-page">
+            <div className="greeting">
                 <h1>Wastewise</h1>
                 <p>reduce food waste</p>
             </div>
@@ -32,6 +32,6 @@ export default function AuthPage({ setUser }) {
                     <p>Don't have an account?</p> <p>Sign up <a className="authpage-link" onClick={handleSwitchForms} href="">here</a></p>
                 </>
             }
-        </>
+        </div>
     )
 }

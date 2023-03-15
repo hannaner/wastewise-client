@@ -1,6 +1,4 @@
-* {
-  
-}
+
 :root {
   --reseda-green: #797d62ff;
   --moss-green: #9b9b7aff;
@@ -39,4 +37,15 @@ code {
 p.error-message {
   color: red;
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--beaver);
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--reseda-green);
+  font-weight: bold;
 }

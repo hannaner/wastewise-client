@@ -11,6 +11,7 @@ export default function NavBar({ user, setUser }){
 
     return (
         <nav>
+            
             <span>Logged in as {localStorage.getItem('user')}</span>
             &nbsp; | &nbsp; 
             <Link to="" onClick={handleLogout}>Logout</Link>
