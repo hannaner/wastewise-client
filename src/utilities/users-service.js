@@ -23,10 +23,17 @@ export function getUser() {
     }
 }
 
-export function logOut() {
+export async function logOut(credentials) {
+    // call logout from django
     localStorage.removeItem("token")
     localStorage.removeItem("user")
     localStorage.removeItem("userId")
+    // if (credentials){
+    //     await usersAPI.logout(credentials)
+    //     return
+    // } else {
+    //     return console.log('no user')
+    // }
 }
 
 export async function login(credentials) {

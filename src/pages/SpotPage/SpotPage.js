@@ -1,20 +1,22 @@
 /* ------- Page to view all spots -------*/
 import { useState, useEffect } from 'react'
 import NewSpotForm from '../../components/NewSpotForm/NewSpotForm'
-import SpotItem from '../../components/SpotItem/SpotItem'
+import Spot from '../../components/Spot/Spot'
 import * as spotAPI from '../../utilities/spot-api'
 
 export default function SpotPage({ user, setUser }){
     // state for showing all Spots
-    const [showSpot, setShowSpot] = useState()
+    const [showSpots, setShowSpots] = useState()
     // state for creating new Spot
     const [newSpot, setNewSpot] = useState('')
+    // state for showing single spot - to implement in v2
+    // const [showSpotDetails, setShowSpotDetails] = useState()
 
     // API call to retrieve all spots - use to update state
     async function getAllSpots(){
         try {
             const spotsBelongingToUser = await spotAPI.indexSpots()
-            setShowSpot(spotsBelongingToUser.spots)
+            setShowSpots(spotsBelongingToUser.spots)
         } catch(error) {
             console.error(error)
         }
@@ -27,15 +29,16 @@ export default function SpotPage({ user, setUser }){
 
     let spotsList = null
 
-    if (showSpot){
-        // console.log(showSpot)
-        spotsList = showSpot.map((spotObj, index) => (
-            <SpotItem
+    // show all spots
+    if (showSpots){
+        spotsList = showSpots.map((spot, index) => (
+            <Spot
                 key={index}
-                spotId={spotObj.id}
-                spotTitle={spotObj.title} 
-                spotDescription={spotObj.description}
-                spotItems={spotObj.items}
+                spotId={spot.id}
+                spotTitle={spot.title} 
+                spotDescription={spot.description}
+                spotItems={spot.items}
+                getAllSpots={getAllSpots}
             />
         ))
     }
@@ -50,8 +53,6 @@ export default function SpotPage({ user, setUser }){
                 user={user}
                 newSpot={newSpot}
                 setNewSpot={setNewSpot}
-                showSpot={showSpot}
-                setShowSpot={setShowSpot}
                 getAllSpots={getAllSpots}
             />
         </>

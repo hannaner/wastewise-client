@@ -1,7 +1,7 @@
 /* ------- Form to create new spot -------*/
 import * as spotAPI from '../../utilities/spot-api'
 
-export default function NewSpotForm({ user, setUser, newSpot, setNewSpot, showSpot, setShowSpot, getAllSpots }){
+export default function NewSpotForm({ newSpot, setNewSpot, getAllSpots }){
 
     const userId = parseInt(localStorage.getItem('userId'))
 
@@ -18,9 +18,11 @@ export default function NewSpotForm({ user, setUser, newSpot, setNewSpot, showSp
         try {
             const spotData = { "title": newSpot.title, "description": newSpot.description, "owner": userId}
     
-            const updatedSpot = await spotAPI.createSpot(spotData)
+            await spotAPI.createSpot(spotData)
 
+            // render Spots state to show newly added spot
             getAllSpots()
+            setNewSpot('')
 
         } catch (error) {
             console.error(error)

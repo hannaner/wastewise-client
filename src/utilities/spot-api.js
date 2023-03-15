@@ -11,3 +11,13 @@ export async function createSpot(spotData){
 export function indexSpots(){
     return sendRequest(BASE_URL + '/spots/', 'GET')
 }
+
+// Update single spot
+export function updateSpot(spotId){
+    return sendRequest(`${BASE_URL}/spots/${spotId}`, 'PATCH', spotId)
+}
+
+// View single spot
+export function showSpot(spotId){
+    return sendRequest(`${BASE_URL}/spots/${spotId}`, 'GET')
+}

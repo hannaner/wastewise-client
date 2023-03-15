@@ -1,28 +1,4 @@
-// import { useEffect, useState } from 'react'
-// import * as itemAPI from '../../utilities/item-api'
+/* ------- (To be later reorganized) Spot details, including its items -------*/
+// export default function SpotDetailItems(){
 
-// export default function SpotDetailItems({ spotId }){
-//     const [showItems, setShowItems] = useState()
-
-//     async function getAllItems(){
-//         try {
-//             const allItems = await itemAPI.indexItems(spotId)
-//             // is this sending the id right?
-//             setShowItems(allItems)
-//         } catch (error) {
-//             console.error(error)
-//         }
-//     }
-
-//     useEffect(function(){
-//         getAllItems()
-//     }, [])
-
-//     // console.log(showItems)
-
-//     return(
-//         <>
-//             <p>spot items</p>
-//         </>
-//     );
 // }

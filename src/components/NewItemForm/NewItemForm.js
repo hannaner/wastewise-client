@@ -1,13 +1,11 @@
 import { useRef, useState } from 'react'
 import * as itemAPI from '../../utilities/item-api'
 
-export default function NewItemForm({ spotId }){
+export default function NewItemForm({ spotId, getAllSpots }){
     const [newItem, setNewItem] = useState('')
     // for setting expiration date
     const [expDate, setExpDate] = useState('')
     const dateInputRef = useRef(null)
-
-    // const spot_idRef = useRef(spotId)
 
     function handleDateChange(event){
         setExpDate(event.target.value)
@@ -23,19 +21,17 @@ export default function NewItemForm({ spotId }){
     async function handleAddItem(event){
         event.preventDefault()
         setExpDate(dateInputRef)
-        console.log(expDate)
-        console.log(newItem)
-        console.log(spotId)
+
         try {
             const itemData = {name: newItem.name, quantity: newItem.quantity, exp_date: expDate, spot_id: spotId
             }
-            console.log(itemData)
             
             await itemAPI.createItem(itemData)
-            setExpDate(null)
+
+            getAllSpots()
+
             setNewItem('')
             
-            console.log(expDate)
         } catch(error) {
             console.error(error)
         }

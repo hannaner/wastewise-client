@@ -1,3 +1,4 @@
+/* ------- Item details -------*/
 export default function Items({ itemId, itemName, itemQuantity, itemExpDate}){
     return(
         <>
