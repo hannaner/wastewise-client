@@ -1,4 +1,7 @@
 .App {
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .welcome-page {
@@ -13,6 +16,14 @@
 .welcome-page p {
   margin-top: 4px;
   margin-bottom: 4px;
+}
+
+.welcome-page button {
+  font-size: 1rem;
+}
+
+.welcome-page .form-container {
+  margin-top: 15px;
 }
 
 .greeting .form-container {
