@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import NewSpotForm from '../../components/NewSpotForm/NewSpotForm'
 import Spot from '../../components/Spot/Spot'
 import * as spotAPI from '../../utilities/spot-api'
+import './SpotPage.css'
 
 export default function SpotPage({ user, setUser }){
     // state for showing all Spots

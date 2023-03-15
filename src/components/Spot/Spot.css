@@ -1,0 +1,31 @@
+.spot-item {
+    align-items: flex-start;
+    align-content: space-between;
+    border: .3vmin solid var(--moss-green);
+    background-color: var(--beige);
+    border-radius: .5vmin;
+    display: flex;
+    padding: 10px 15px;
+    margin: 10px; 
+    margin-bottom: 20px;
+}
+
+.spot-item button {
+    font-size: smaller;
+}
+
+button.delete-btn {
+    margin-left: 0px;
+}
+
+button.edit-btn {
+    background-color: var(--tea-green);
+}
+
+button.item-toggle-btn {
+    background-color: var(--chamoisee);
+}
+
+.item-form-container {
+    margin-left: 10px;
+}

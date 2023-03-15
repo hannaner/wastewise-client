@@ -1,38 +1,81 @@
 .App {
-  text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
+.form-container {
+  padding: 3vmin;
+  background-color: var(--white);
+  border: .3vmin solid var(--tea-green);
+  border-radius: 1vmin;
+  width: 600px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1.25vmin;
+  color: var(--text-dark);
+}
+
+label {
+  font-size: 2vmin;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+input {
+  padding: 1vmin;
+  font-size: 2vmin;
+  border: .3vmin solid var(--reseda-green);
+  border-radius: .5vmin;
+  color: var(--text-dark);
+  background-image: none !important; 
+  outline: none;
+} 
+
+input:focus {
+  border: .4vmin solid var(--sunglow);
+}
+
+body {
+  margin: 0;
+  font-family: 'Gloock', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 2vmin;
+  height: 100vh;
+  margin-bottom: 20vh;
+}
+
+button, a.button {
+  /* font-family: 'Inter', sans-serif; */
+  margin: 1vmin;
+  padding: 1vmin;
+  background-color: var(--moss-green);
+  font-size: 2vmin;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  /* border: .1vmin solid var(--ebony); */
+  border-radius: .5vmin;
+  outline: none;
+  cursor: pointer;
+}
+
+button:disabled, form:invalid button[type="submit"] {
+  cursor: not-allowed;
+  background-color: var(--khaki);
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button[type="submit"] {
+  grid-column: span 2;
+  background-color: var(--sunglow);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button.delete-btn {
+  background-color: var(--cornsilk);
+  color: grey;
+  border: .3vmin solid grey; 
 }

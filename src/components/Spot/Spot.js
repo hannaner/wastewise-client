@@ -1,11 +1,11 @@
 /* ------- Spot, including its items -------*/
 /* ------- this will be a navigation to view each spot rather than all spots and its details -------*/
 
-
 import { useState } from 'react'
 import NewItemForm from '../NewItemForm/NewItemForm'
 import Items from '../Items/Items'
 import * as spotAPI from '../../utilities/spot-api'
+import './Spot.css'
 
 export default function Spot({ spotId, spotTitle, spotDescription, spotItems, getAllSpots }){
     const initialSpotData = {
@@ -78,13 +78,13 @@ export default function Spot({ spotId, spotTitle, spotDescription, spotItems, ge
     }
     
     return(
-        <>
+        <div className="spot-item">
             <div data-id={spotId}>
-                <h3>Spot: {spotTitle}</h3>
-                <button onClick={handleDeleteSpot}>Delete spot</button>
-                <button onClick={toggleUpdateForm}>Edit spot</button>
+                <h3>{spotTitle}</h3>
+                <button className="delete-btn" onClick={handleDeleteSpot}>Delete spot</button>
+                <button className="edit-btn" onClick={toggleUpdateForm}>Edit spot</button>
 
-                { !showUpdateForm && 
+                { showUpdateForm && 
                 <>
                     <label>Title</label>
                     <input 
@@ -105,22 +105,21 @@ export default function Spot({ spotId, spotTitle, spotDescription, spotItems, ge
                         onClick={handleUpdateSpot}
                     >Update</button>
                 </>
-
                 }
 
                 <p>Description: {spotDescription}</p>
                 {/* <p>Items in {spotTitle} </p> */}
-                <button onClick={toggleItems}>See items</button>
+                <button className="item-toggle-btn" onClick={toggleItems}>See items</button>
                 {toggle && itemList}
+                
             </div>
-            <div>
+            <div className='item-form-container'>
                 <NewItemForm
                     spotId={spotId}
                     getAllSpots={getAllSpots}
                 />
             </div>
-            <hr></hr>
-        </>
+        </div>
     );
 }
 

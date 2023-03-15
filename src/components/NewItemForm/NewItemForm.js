@@ -38,7 +38,7 @@ export default function NewItemForm({ spotId, getAllSpots }){
     }
 
     return (
-        <>
+        <div className="new-item-form-container">
             <h4>Add an item</h4>
             <form>
                 <label>Item name</label>
@@ -64,7 +64,7 @@ export default function NewItemForm({ spotId, getAllSpots }){
                     ></input>
                 <button type="submit" onClick={handleAddItem}>Add item</button>
             </form>
-        </>
+        </div>
     );
 }
 
