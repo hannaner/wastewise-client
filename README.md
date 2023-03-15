@@ -11,6 +11,10 @@ Resources:
 
 ### Walkthrough
 <figure>
+    <figcaption>Entity relationship diagram (ERD)</figcaption>
+    <img alt="erd" src="public/images/ERD.jpg" width="85%" height="85%">
+</figure>
+<figure>
     <figcaption>Login</figcaption>
     <img alt="login" src="public/images/login.jpg" width="85%" height="85%">
 </figure>
