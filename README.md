@@ -1,11 +1,13 @@
 # Wastewise
 According to the Environmental Protection Agency and the U.S. Department of Agriculture, food waste is estimated to be 30-40% of the entire US food supply, equating to about 219 pounds of waste per person.
 
-To help minimize food waste, Wastewise helps you keep track of your food items before the food item goes bad.
+To help minimize food waste, Wastewise helps you to keep track of your food items before they go bad.
+
+No more bags of spoiled Trader Joe's spinach!
 
 Resources:
-[Food waste guide by RTS](https://www.rts.com/resources/guides/food-waste-america/)
-[USDA on food waste](https://www.usda.gov/foodwaste/faqs)
+- [Food waste guide by RTS](https://www.rts.com/resources/guides/food-waste-america/)
+- [USDA on food waste](https://www.usda.gov/foodwaste/faqs)
 
 ### Walkthrough
 <figure>
