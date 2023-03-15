@@ -25,11 +25,11 @@ export default function AuthPage({ setUser }) {
             )}
             {showSignUp ? 
                 <>
-                    <p>Already have an account? Login <a className="authpage-link" onClick={handleSwitchForms} href="">here</a></p>
+                    <p>Already have an account?</p> <p>Login <a className="authpage-link" onClick={handleSwitchForms} href="">here</a></p>
                 </>
                 : 
                 <>
-                    <p>Don't have an account? Sign up <a className="authpage-link" onClick={handleSwitchForms} href="">here</a></p>
+                    <p>Don't have an account?</p> <p>Sign up <a className="authpage-link" onClick={handleSwitchForms} href="">here</a></p>
                 </>
             }
         </>

@@ -22,6 +22,7 @@ export default function NewSpotForm({ newSpot, setNewSpot, getAllSpots }){
 
             // render Spots state to show newly added spot
             getAllSpots()
+
             setNewSpot('')
 
         } catch (error) {

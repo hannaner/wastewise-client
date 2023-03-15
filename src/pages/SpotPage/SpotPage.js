@@ -43,7 +43,6 @@ export default function SpotPage({ user, setUser }){
         ))
     }
 
-    console.log(showSpots)
     return(
         <>
             <h2>Your spots</h2>
