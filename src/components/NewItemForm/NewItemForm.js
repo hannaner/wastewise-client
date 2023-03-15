@@ -25,8 +25,9 @@ export default function NewItemForm({ spotId }){
         setExpDate(dateInputRef)
         console.log(expDate)
         console.log(newItem)
+        console.log(spotId)
         try {
-            const itemData = {name: newItem.name, quantity: newItem.quantity, exp_date: expDate, spot_id_id: spotId
+            const itemData = {name: newItem.name, quantity: newItem.quantity, exp_date: expDate, spot_id: spotId
             }
             console.log(itemData)
             

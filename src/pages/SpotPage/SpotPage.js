@@ -10,11 +10,11 @@ export default function SpotPage({ user, setUser }){
     // state for creating new Spot
     const [newSpot, setNewSpot] = useState('')
 
-    // API call to retrieve all spots
+    // API call to retrieve all spots - use to update state
     async function getAllSpots(){
         try {
             const spotsBelongingToUser = await spotAPI.indexSpots()
-            setShowSpot(spotsBelongingToUser)
+            setShowSpot(spotsBelongingToUser.spots)
         } catch(error) {
             console.error(error)
         }
@@ -26,18 +26,13 @@ export default function SpotPage({ user, setUser }){
 
 
     let spotsList = null
-    // spotList = showSpot.spots.map((spot, index) => )
-    // console.log(showSpot.spots)
-    // state is a nested array of objects
-    // console.log(spotList)
-    // spotList = showSpot.spots.map((spot, index) => <SpotItem spot={spot} key={index}/>)
-    // testMap = showSpot.spots.map((spotObj) => {return spotObj.title})
+
     if (showSpot){
-        console.log(showSpot)
-        spotsList = showSpot.spots.map((spotObj, index) => (
+        // console.log(showSpot)
+        spotsList = showSpot.map((spotObj, index) => (
             <SpotItem
                 key={index}
-                spotId={spotObj.id} 
+                spotId={spotObj.id}
                 spotTitle={spotObj.title} 
                 spotDescription={spotObj.description}
                 spotItems={spotObj.items}
@@ -50,7 +45,15 @@ export default function SpotPage({ user, setUser }){
             <h2>Your spots</h2>
             {spotsList}
 
-            <NewSpotForm setUser={setUser} user={user}newSpot={newSpot} setNewSpot={setNewSpot} showSpot={showSpot} setShowSpot={setShowSpot}/>
+            <NewSpotForm 
+                setUser={setUser}
+                user={user}
+                newSpot={newSpot}
+                setNewSpot={setNewSpot}
+                showSpot={showSpot}
+                setShowSpot={setShowSpot}
+                getAllSpots={getAllSpots}
+            />
         </>
     );
 }
