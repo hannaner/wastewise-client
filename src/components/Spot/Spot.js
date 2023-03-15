@@ -52,3 +52,8 @@ export default function Spot({ spotId, spotTitle, spotDescription, spotItems, ge
         </>
     );
 }
+
+
+/** toggle state reference:
+ * https://www.youtube.com/watch?v=5CTFTDpHHto
+ */
