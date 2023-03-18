@@ -13,15 +13,20 @@ export function indexSpots(){
 }
 
 // Update single spot
-export function updateSpot(spotId, spotData){
-    return sendRequest(`${BASE_URL}/spots/${spotId}`, 'PATCH', spotData)
+export async function updateSpot(spotId, spotData){
+    try {
+        const spot = await sendRequest(`${BASE_URL}/spots/${spotId}/`, 'PATCH', spotData)
+        return spot
+    } catch(error) {
+        console.error(error)
+    }
 }
 
 // View single spot
 export function showSpot(spotId){
-    return sendRequest(`${BASE_URL}/spots/${spotId}`, 'GET')
+    return sendRequest(`${BASE_URL}/spots/${spotId}/`, 'GET')
 }
 
 export function deleteSpot(spotId){
-    return sendRequest(BASE_URL + '/spots/' + `${spotId}`, 'DELETE')
+    return sendRequest(BASE_URL + '/spots/' + `${spotId}/`, 'DELETE')
 }

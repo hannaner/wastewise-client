@@ -38,27 +38,30 @@ export default function Spot({ spotId, spotTitle, spotDescription, spotItems, ge
         ))
     }
     
-    
+    // Toggle to show spot items
     function toggleItems(){
         setToggle(!toggle)
     }
 
+    // Toggle to show update form
     function toggleUpdateForm(){
         setShowUpdateForm(!showUpdateForm)
     }
 
-    function handleChange(event){
-        setEditedSpot({
-            ...editedSpot,
-            [event.target.name]: event.target.value
-        })
-    }
-
+    // Delete spot
     async function handleDeleteSpot(event){
         event.preventDefault()
 
         await spotAPI.deleteSpot(spotId)
         getAllSpots()
+    }
+
+    // Gather updated spot data
+    function handleChange(event){
+        setEditedSpot({
+            ...editedSpot,
+            [event.target.name]: event.target.value
+        })
     }
     
     // Async function to send patch request for updating spot
@@ -66,7 +69,6 @@ export default function Spot({ spotId, spotTitle, spotDescription, spotItems, ge
         event.preventDefault()
         
         const updatedSpotData = {
-            id: spotId,
             title: editedSpot.title,
             description: editedSpot.description
         }
