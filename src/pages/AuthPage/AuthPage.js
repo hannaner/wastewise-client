@@ -2,6 +2,7 @@ import { useState } from 'react'
 import SignUpForm from '../../components/SignupForm/SignupForm'
 import LoginForm from '../../components/LoginForm/LoginForm'
 // import "./AuthPage.css"
+import logo from '../../img/logo.png'
 
 export default function AuthPage({ setUser }) {
     
@@ -15,8 +16,9 @@ export default function AuthPage({ setUser }) {
     return (
         <div className="welcome-page">
             <div className="greeting">
-                <h1>Wastewise</h1>
-                <p>reduce food waste</p>
+                {/* <img className="logo" src={logo} alt="Logo" /> */}
+                <h1>wastewise</h1>
+                <p className="slogan">track your groceries to reduce food waste</p>
             </div>
             {showSignUp ? (
                 <SignUpForm setUser={setUser} />

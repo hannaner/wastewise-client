@@ -13,6 +13,22 @@
   flex-direction: column;
 }
 
+/* .welcome-page img {
+  max-height: 5rem;
+} */
+
+.welcome-page h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 3.5em;
+  color: var(--reseda-green);
+  margin-bottom: 0px;
+}
+
+.welcome-page p.slogan {
+  font-family: 'Shrikhand', cursive;
+  color: var(--reseda-green);
+}
+
 .welcome-page p {
   margin-top: 4px;
   margin-bottom: 4px;
