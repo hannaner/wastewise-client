@@ -29,6 +29,7 @@ export async function logOut(credentials) {
     localStorage.removeItem("user")
     localStorage.removeItem("userId")
     // console.log(credentials)
+    // need to fix this bug
     // // call logout from django
     // if (credentials){
     //     await usersAPI.logout(credentials)
