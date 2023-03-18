@@ -1,5 +1,5 @@
 /* ------- Spot, including its items -------*/
-/* ------- this will be a navigation to view each spot rather than all spots and its details -------*/
+/* ------- V2: this will be a navigation to view each spot rather than all spots and its details -------*/
 
 import { useState } from 'react'
 import NewItemForm from '../NewItemForm/NewItemForm'
@@ -73,7 +73,6 @@ export default function Spot({ spotId, spotTitle, spotDescription, spotItems, ge
             description: editedSpot.description
         }
 
-        console.log(updatedSpotData)
         await spotAPI.updateSpot(spotId, updatedSpotData)
         getAllSpots()
         setEditedSpot(initialSpotData)

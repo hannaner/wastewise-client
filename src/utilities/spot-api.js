@@ -2,12 +2,12 @@
 import sendRequest from "./users-api"
 const BASE_URL = '/wastewise'
 
-// create new spot
+// Create new spot
 export async function createSpot(spotData){
     return sendRequest(BASE_URL + '/spots/', 'POST', spotData)
 }
 
-// view all spots
+// View all spots
 export function indexSpots(){
     return sendRequest(BASE_URL + '/spots/', 'GET')
 }
@@ -27,6 +27,7 @@ export function showSpot(spotId){
     return sendRequest(`${BASE_URL}/spots/${spotId}/`, 'GET')
 }
 
+// Delete single spot
 export function deleteSpot(spotId){
     return sendRequest(BASE_URL + '/spots/' + `${spotId}/`, 'DELETE')
 }

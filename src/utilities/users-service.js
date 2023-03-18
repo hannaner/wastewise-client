@@ -1,12 +1,13 @@
 import * as usersAPI from './users-api'
 
+// Sign up
 export async function signUp(userData) {
     const token = await usersAPI.signUp(userData)
-    // console.log(token)
     // localStorage.setItem("token", token.user.token)
     return login(userData)
 }
 
+// Get token, used for sign up and login
 export function getToken() {
     const token = localStorage.getItem("token")
     if(!token) return null
@@ -24,10 +25,11 @@ export function getUser() {
 }
 
 export async function logOut(credentials) {
-    // call logout from django
     localStorage.removeItem("token")
     localStorage.removeItem("user")
     localStorage.removeItem("userId")
+    // console.log(credentials)
+    // // call logout from django
     // if (credentials){
     //     await usersAPI.logout(credentials)
     //     return
@@ -42,6 +44,5 @@ export async function login(credentials) {
     // this isn't secure, but will need to figure out how to obtain user info later 
     localStorage.setItem("user", token.user.email)
     localStorage.setItem("userId", token.user.id)
-    console.log(token.user)
     return getUser()
 }

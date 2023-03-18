@@ -17,7 +17,10 @@ export default async function sendRequest(url, method='GET', payload=null){
     const options = { method }
     
     if (payload){
-        options.headers = {'Content-type': 'application/json'}
+        options.headers = {
+            'Accept': 'application/json',
+            'Content-type': 'application/json',
+        }
         options.body = JSON.stringify(payload)
     }
 
