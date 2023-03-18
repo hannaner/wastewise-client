@@ -1,9 +1,10 @@
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    align-items: center;
     margin-bottom: 3vh;
-    color: var(--beaver)
+    color: var(--beaver);
+    position: relative;
 }
 
 nav a {
@@ -14,4 +15,25 @@ nav a {
 nav a:hover {
     color: var(--reseda-green);
     font-weight: bold;
+}
+
+.navbar-logo {
+    line-height: 0;
+}
+
+.navbar-menu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+nav img.logo {
+    max-height: 4rem;
+    flex-shrink: 0;
 }

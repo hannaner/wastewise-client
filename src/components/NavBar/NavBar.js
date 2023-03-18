@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import * as userService from '../../utilities/users-service'
 import './NavBar.css'
+import logo from '../../img/logo.png'
 
 export default function NavBar({ user, setUser }){
     
@@ -11,10 +12,23 @@ export default function NavBar({ user, setUser }){
 
     return (
         <nav>
-            
-            <span>Logged in as {localStorage.getItem('user')}</span>
-            &nbsp; | &nbsp; 
-            <Link to="" onClick={handleLogout}>Logout</Link>
+            <div className="navbar-logo">
+                <img className="logo" src={logo} alt="Logo" />
+            </div>
+            <div className="navbar-menu">
+                <ul></ul>
+                <ul>
+                    <li>
+                        <span>Logged in as {localStorage.getItem('user')}</span>
+                    </li>
+                    <li>
+                        &nbsp; | &nbsp; 
+                    </li>
+                    <li>
+                        <Link to="" onClick={handleLogout}>Logout</Link>
+                    </li>
+                </ul>
+            </div>
         </nav>
     )
 }
