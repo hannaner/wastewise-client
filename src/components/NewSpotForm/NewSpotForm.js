@@ -42,6 +42,7 @@ export default function NewSpotForm({ newSpot, setNewSpot, getAllSpots }){
                     placeholder="Location of your spot (i.e. pantry, fridge, etc.)"
                     value={newSpot.title}
                     onChange={handleChange}
+                    required
                 />
                 <label>Description</label>
                 <input 
@@ -50,6 +51,7 @@ export default function NewSpotForm({ newSpot, setNewSpot, getAllSpots }){
                     placeholder="Add any notes on this spot (i.e. on fridge door)"
                     value={newSpot.description}
                     onChange={handleChange}
+                    required
                 />
                 <button type="submit" onClick={handleCreateSpot}>
                     Add spot
