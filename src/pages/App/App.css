@@ -126,7 +126,7 @@ button.delete-btn {
 /* ------ Login/Sign up forms ------ */
 .form-container {
   padding: 3vmin;
-  background-color: var(--white);
+  background-color: var(--tea-green);
   border: .3vmin solid var(--tea-green);
   border-radius: 1vmin;
   width: 600px;
