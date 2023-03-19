@@ -35,12 +35,16 @@ input:focus {
 
 body {
   margin: 0;
-  font-family: 'Gloock', serif;
+  /* font-family: 'Gloock', serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 2vmin;
   height: 100vh;
   margin-bottom: 20vh;
+}
+
+button {
+  cursor: pointer;
 }
 
 button, a.button {
@@ -55,7 +59,6 @@ button, a.button {
   /* border: .1vmin solid var(--ebony); */
   border-radius: .5vmin;
   outline: none;
-  cursor: pointer;
 }
 
 button:disabled, form:invalid button[type="submit"] {
@@ -134,6 +137,7 @@ button.delete-btn {
   margin-top: 0px;
   margin-bottom: 1.2rem;
   color: var(--reseda-green);
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 /* ------ Spot page ------ */
