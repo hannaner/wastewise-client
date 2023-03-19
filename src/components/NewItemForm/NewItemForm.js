@@ -63,6 +63,7 @@ export default function NewItemForm({ spotId, getAllSpots }){
                     name="exp_date"
                     ref={dateInputRef}
                     onChange={handleDateChange}
+                    required
                     ></input>
                 <button type="submit" onClick={handleAddItem}>Add item</button>
             </form>
