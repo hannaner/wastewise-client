@@ -84,8 +84,11 @@ export default function Spot({ spotId, spotTitle, spotDescription, spotItems, ge
                 <h3>{spotTitle}</h3>
                 <p>Description: {spotDescription}</p>
                 <div>
-                    <button className="delete-btn" onClick={handleDeleteSpot}>Delete spot</button>
+                    
                     <button className="edit-btn" onClick={toggleUpdateForm}>Edit spot</button>
+                    {/* <p>Items in {spotTitle} </p> */}
+                    <button className="item-toggle-btn" onClick={toggleItems}>See items</button>
+                    {toggle && itemList}
                 </div>
 
                 { showUpdateForm && 
@@ -108,12 +111,11 @@ export default function Spot({ spotId, spotTitle, spotDescription, spotItems, ge
                         type="submit"
                         onClick={handleUpdateSpot}
                     >Update</button>
+                    <button className="delete-btn" onClick={handleDeleteSpot}>Delete spot</button>
                 </>
                 }
 
-                {/* <p>Items in {spotTitle} </p> */}
-                <button className="item-toggle-btn" onClick={toggleItems}>See items</button>
-                {toggle && itemList}
+
                 
             </div>
             <div className='item-form-container'>

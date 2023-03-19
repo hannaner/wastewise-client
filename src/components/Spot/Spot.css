@@ -1,11 +1,11 @@
 .spot-item {
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-between;
     border: .3vmin solid var(--tea-green);
     background-color: var(--beige);
     border-radius: .5vmin;
     display: flex;
-    padding: 10px 5px;
+    padding: 10px 25px;
     margin-top: 10px; 
     margin-bottom: 20px;
 }
@@ -24,6 +24,7 @@ button.delete-btn {
 
 button.edit-btn {
     background-color: var(--tea-green);
+    margin-left: 0px;
 }
 
 button.item-toggle-btn {
