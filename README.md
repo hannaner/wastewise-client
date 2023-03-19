@@ -26,6 +26,10 @@ Resources:
     <figcaption>Add items to your spot</figcaption>
     <img alt="all" src="public/images/show_all.jpg" width="85%" height="85%">
 </figure>
+<figure>
+    <figcaption>Update your spot's details</figcaption>
+    <img alt="all" src="public/images/update_spot.jpg" width="85%" height="85%">
+</figure>
 
 
 ## Tech stack
