@@ -19,7 +19,7 @@ export default function NavBar({ user, setUser }){
                 <ul></ul>
                 <ul>
                     <li>
-                        <span>Logged in as {localStorage.getItem('user')}</span>
+                        <span>Welcome {localStorage.getItem('user')}</span>
                     </li>
                     <li>
                         &nbsp; | &nbsp; 

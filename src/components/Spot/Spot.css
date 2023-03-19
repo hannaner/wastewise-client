@@ -6,12 +6,16 @@
     border-radius: .5vmin;
     display: flex;
     padding: 10px 5px;
-    margin: 10px; 
+    margin-top: 10px; 
     margin-bottom: 20px;
 }
 
 .spot-item button {
     font-size: smaller;
+}
+
+.spot-item p {
+    font-size: 1.4vmin;;
 }
 
 button.delete-btn {
@@ -24,6 +28,7 @@ button.edit-btn {
 
 button.item-toggle-btn {
     background-color: var(--chamoisee);
+    margin-left: 0px;
 }
 
 .item-form-container {

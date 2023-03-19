@@ -45,8 +45,8 @@ export default function SpotPage({ user, setUser }){
     }
 
     return(
-        <>
-            <h2>Your spots</h2>
+        <div className="spot-page-container">
+            {/* <h2>Your spots</h2> */}
             <NewSpotForm 
                 setUser={setUser}
                 user={user}
@@ -55,15 +55,16 @@ export default function SpotPage({ user, setUser }){
                 getAllSpots={getAllSpots}
             />
             
+            <h2>Your spots: </h2>
             { (showSpots == undefined || !showSpots || showSpots.length == 0) ? 
-            <>
+            <div className="no-spots-msg">
                 <p>No spots created yet!</p>
                 <p>Start by adding a spot where you'd like to keep track of food items</p>
-            </>
+            </div>
             :
             spotsList
             }
 
-        </>
+        </div>
     );
 }
