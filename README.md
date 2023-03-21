@@ -1,13 +1,29 @@
 # Wastewise
-According to the Environmental Protection Agency and the U.S. Department of Agriculture, food waste is estimated to be 30-40% of the entire US food supply, equating to about 219 pounds of waste per person.
+Wastewise helps you keep track of groceries and minimize food waste.
 
-To help minimize food waste, Wastewise helps you to keep track of your food items before they go bad.
+I was inspired by my own need when I noticed ingredients spoiling in the fridge that I bought eagerly 2 weeks ago thinking that I was going to cook an elaborate dish, only to be neglected to the trash. Self-reminder to be mindful what you're putting in your basket when grocery shopping on an empty stomach hehe. 
 
-No more bags of spoiled Trader Joe's spinach!
+Zooming out to food waste stats in the US, the Environmental Protection Agency and the U.S. Department of Agriculture stated that food waste is estimated to be 30-40% of the entire US food supply, equating to about 219 pounds of waste per person.
 
-Resources:
+This project is a full-stack application created independently. Check out the client-side code here: - - [Wastewise backend repository](https://github.com/hannaner/wastewise-server)
+
+References on food waste:
 - [Food waste guide by RTS](https://www.rts.com/resources/guides/food-waste-america/)
 - [USDA on food waste](https://www.usda.gov/foodwaste/faqs)
+
+
+## Tech stack
+|          | Technologies used              |
+|----------|--------------------------------|
+| Backend  | Django, Python, PostgreSQL     |
+| Frontend | React, JavaScript, HTML, CSS   |
+| Other    | Django Frameworks, Git, Render |
+
+
+## Getting Started
+- Live site: https://wastewise.onrender.com
+- [Project planning](https://trello.com/invite/b/PEh64K59/ATTI39744314898e569baea8946417d090d1194B91FC/project-4)
+
 
 ### Walkthrough
 <figure>
@@ -31,19 +47,6 @@ Resources:
     <img alt="all" src="public/images/update_spot.jpg" width="85%" height="85%">
 </figure>
 
-
-## Tech stack
-|          | Technologies used            |
-|----------|------------------------------|
-| Backend  | Django, Python, PostgreSQL   |
-| Frontend | React, JavaScript, HTML, CSS |
-| Other    | Django Frameworks, Git       |
-
-
-## Getting Started
-- [Project planning](https://trello.com/invite/b/PEh64K59/ATTI39744314898e569baea8946417d090d1194B91FC/project-4)
-- [Server side repository](https://github.com/hannaner/wastewise-server)
-- Deployed website: :construction: under construction :construction:
 
 
 ## Next Steps
