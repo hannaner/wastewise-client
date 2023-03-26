@@ -42,28 +42,17 @@ export default async function sendRequest(url, method='GET', payload=null){
     //     throw new Error('Bad request')
     // }
 
-
     const res = await fetch(url, options)
-    if(method === "DELETE"){
-        return
-    }
-    else if(res.ok) {
-        return res.json()
-    } 
-    else {
-        throw new Error("Bad Request")
-    }
-
-    // const res = await fetch(url, options)
-    // console.log("hit send request")
+    console.log("hit send request")
     
-    // if (res.ok) {
-    //     console.log("res is ok")
-    //     if (method === "DELETE"){
-    //         return res
-    //     }
-    //     return res.json()
-    // } else {
-    //     throw new Error('Bad request')
-    // }
+    if (res.ok) {
+        console.log("res is ok")
+        // if (method === "DELETE"){
+        if (res.status === 204){
+            return res
+        }
+        return res.json()
+    } else {
+        throw new Error('Bad request')
+    }
 }
