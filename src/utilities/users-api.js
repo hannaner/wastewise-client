@@ -47,7 +47,7 @@ export default async function sendRequest(url, method='GET', payload=null){
     if (res.ok) {
         console.log("res is ok")
         if (method === "DELETE"){
-            return
+            return res
         }
         return res.json()
     } else {
