@@ -30,24 +30,25 @@ export default async function sendRequest(url, method='GET', payload=null){
         options.headers.Authorization = `Token ${token}`
     }
 
-    const res = await fetch(url, options)
-    if (res.ok) {
-        if (res.status === 204){
-            return res
-        } else {
-            return res.json()
-        }
-    } else {
-        console.log(res.error)
-        throw new Error('Bad request')
-    }
     // const res = await fetch(url, options)
     // if (res.ok) {
-    //     if (method === "DELETE"){
-    //         return
+    //     if (res.status === 204){
+    //         return res
+    //     } else {
+    //         return res.json()
     //     }
-    //     return res.json()
     // } else {
+    //     console.log(res.error)
     //     throw new Error('Bad request')
     // }
+    const res = await fetch(url, options)
+    if(method === "DELETE"){
+        return
+    }
+    else if(res.ok) {
+        return res.json()
+    } 
+    else {
+        throw new Error("Bad Request")
+    }
 }
