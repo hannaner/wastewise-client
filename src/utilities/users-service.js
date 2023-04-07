@@ -40,6 +40,7 @@ export async function logOut(credentials) {
 }
 
 export async function login(credentials) {
+    console.log(credentials)
     const token = await usersAPI.login(credentials)
     localStorage.setItem("token", token.user.token)
     // this isn't secure, but will need to figure out how to obtain user info later 
