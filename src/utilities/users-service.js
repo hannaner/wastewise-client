@@ -25,18 +25,18 @@ export function getUser() {
 }
 
 export async function logOut(credentials) {
-    localStorage.removeItem("token")
-    localStorage.removeItem("user")
-    localStorage.removeItem("userId")
     // console.log(credentials)
     // need to fix this bug
     // // call logout from django
-    // if (credentials){
-    //     await usersAPI.logout(credentials)
-    //     return
-    // } else {
-    //     return console.log('no user')
-    // }
+    if (credentials){
+        await usersAPI.logout(credentials)
+        localStorage.removeItem("token")
+        localStorage.removeItem("user")
+        localStorage.removeItem("userId")
+        return
+    } else {
+        return console.log('no user')
+    }
 }
 
 export async function login(credentials) {

@@ -4,10 +4,11 @@ import './NavBar.css'
 import logo from '../../img/logo.png'
 
 export default function NavBar({ user, setUser }){
-    
+    console.log("this is user prop")
+    console.log(user)
+
     function handleLogout(){
-        userService.logOut()
-        // userService.logOut(user)
+        userService.logOut(user)
         setUser(null)
     }
 
