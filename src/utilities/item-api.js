@@ -1,6 +1,6 @@
 /* ------- API requests for Item -------*/
 import sendRequest from './send-request-api'
-const BASE_URL = '/wastewise'
+const BASE_URL = 'wastewise'
 
 // create new item
 export async function createItem(itemData){

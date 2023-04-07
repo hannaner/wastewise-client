@@ -1,6 +1,6 @@
 /* ------- API requests for Spot -------*/
 import sendRequest from './send-request-api'
-const BASE_URL = '/wastewise'
+const BASE_URL = 'wastewise'
 
 // Create new spot
 export async function createSpot(spotData){
