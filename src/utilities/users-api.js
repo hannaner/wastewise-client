@@ -37,9 +37,11 @@ export default async function sendRequest(url, method='GET', payload=null){
         console.log("res is ok")
         if (res.status === 204){
             return res
+        } else {
+            return res.json()
         }
-        return res.json()
     } else {
+        console.log(res.error)
         throw new Error('Bad request')
     }
 
