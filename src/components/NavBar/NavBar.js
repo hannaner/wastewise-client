@@ -7,6 +7,7 @@ export default function NavBar({ user, setUser }){
     
     function handleLogout(){
         userService.logOut()
+        // userService.logOut(user)
         setUser(null)
     }
 

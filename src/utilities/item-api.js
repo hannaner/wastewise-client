@@ -1,5 +1,5 @@
 /* ------- API requests for Item -------*/
-import sendRequest from "./users-api"
+import sendRequest from './send-request-api'
 const BASE_URL = '/wastewise'
 
 // create new item

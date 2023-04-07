@@ -1,5 +1,5 @@
 /* ------- API requests for Spot -------*/
-import sendRequest from "./users-api"
+import sendRequest from './send-request-api'
 const BASE_URL = '/wastewise'
 
 // Create new spot
